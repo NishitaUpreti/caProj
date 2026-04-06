@@ -118,7 +118,7 @@ def run_monitor(victim_path: Path, log_path:Path):
 		child.sendline(str(ui_len))
 
 		child.expect("Enter your name: ")
-		ui_name = input("Enter name: ")
+		ui_name = input()
 		child.sendline(ui_name)
 
 		check_overflow(ui_len, ui_name, log_path)
