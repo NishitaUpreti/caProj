@@ -68,6 +68,8 @@ int main(){
 			 "Atomic Habits by James Clear"};
 
 	int price[5] = {300,250,400,500,350};
+	cout << "Enter your name: ";
+	cout.flush();
 	scanf("%s",name);  // VULN: no bounds check on input length
 	printf("\n----Welcome to the shop ");
 	printf(name);  // VULN: intentional format-string vulnerability

@@ -117,7 +117,7 @@ def run_monitor(victim_path: Path, log_path:Path):
 		ui_len = int(input())
 		child.sendline(str(ui_len))
 
-		child.expect(r"Enter.*name", timeout=10)
+		child.expect("Enter your name: ")
 		ui_name = input("Enter name: ")
 		child.sendline(ui_name)
 
@@ -142,7 +142,7 @@ def run_monitor(victim_path: Path, log_path:Path):
 
 
 		while True:
-			child.expect("Do you want to buy a book? [y/n] : ")
+			child.expect(r"Do you want to buy a book\?")
 			ui_ch = input()
 			child.sendline(ui_ch)
 
